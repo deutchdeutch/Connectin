@@ -2,6 +2,7 @@
     "$schema": "https://www.schemastore.org/package.json",
     "private": true,
     "type": "module",
+    "homepage": "https://deutchdeutch.github.io/Connectin",
     "scripts": {
         "build": "vite build",
         "dev": "vite",
