@@ -1,6 +1,6 @@
 # Connect'In API — Backend Laravel
 
-> Bienvenue sur le backend de **Connect'In**, un réseau social développé avec Laravel.  
+> Bienvenue sur le backend de **Connect'In**, un réseau social professionnel développé avec Laravel.  
 > Cette API gère l'authentification, les publications, les commentaires et les interactions (likes).
 
 ---
