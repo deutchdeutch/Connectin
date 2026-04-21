@@ -1,6 +1,6 @@
 # Étape 1 : Build du Front (React)
 FROM node:18-alpine as build-stage
-WORKDIR /app
+WORKDIR /app/frontend
 COPY package*.json ./
 RUN npm install
 COPY . .
