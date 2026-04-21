@@ -1,0 +1,24 @@
+{
+  "resources/asset/logoConnectin.png": {
+    "file": "assets/logoConnectin-BNelhwgo.png",
+    "src": "resources/asset/logoConnectin.png"
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-CDkctase.css",
+    "src": "resources/css/app.css",
+    "isEntry": true,
+    "name": "app",
+    "names": [
+      "app.css"
+    ]
+  },
+  "resources/js/app.jsx": {
+    "file": "assets/app-CNw7e_Au.js",
+    "name": "app",
+    "src": "resources/js/app.jsx",
+    "isEntry": true,
+    "assets": [
+      "assets/logoConnectin-BNelhwgo.png"
+    ]
+  }
+}
