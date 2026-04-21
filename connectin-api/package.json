@@ -2,12 +2,9 @@
     "$schema": "https://www.schemastore.org/package.json",
     "private": true,
     "type": "module",
-    "homepage": "https://deutchdeutch.github.io/Connectin",
     "scripts": {
         "build": "vite build",
-        "dev": "vite",
-        "predeploy": "npm run build",
-        "deploy": "gh-pages -d build"
+        "dev": "vite"
     },
     "devDependencies": {
         "@tailwindcss/vite": "^4.0.0",
