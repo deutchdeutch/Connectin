@@ -1,9 +1,22 @@
 # Étape 1 : Build du Front (React)
-FROM node:20-alpine as build-stage
+# Étape 1 : Build du Front
+FROM node:22-alpine as build-stage
 WORKDIR /app
+
+# On copie uniquement les fichiers de dépendances d'abord
 COPY package*.json ./
+
+# On installe proprement (sans les fichiers locaux qui pourraient polluer)
 RUN npm install
+
+# On copie le reste du code
 COPY . .
+
+# Suppression préventive de dossiers qui pourraient causer des conflits de parsing
+RUN rm -rf public/build bootstrap/cache/*.php
+
+# On lance le build avec plus de mémoire allouée à Node
+ENV NODE_OPTIONS="--max-old-space-size=1024"
 RUN npm run build
 
 # Étape 2 : Configuration du Backend (PHP/Laravel)
