@@ -1,10 +1,9 @@
 # Étape 1 : Build du Front (React)
 FROM node:18-alpine as build-stage
-WORKDIR /app/connectin-api
-COPY package*.json ./
-RUN npm install
+WORKDIR /app
 COPY . .
-WORKDIR /app/connectin-api
+RUN npm install --prefix connecti-api
+RUN npm build --prefix connectin-api
 RUN npm run build
 
 # Étape 2 : Configuration du Backend (PHP/Laravel)
