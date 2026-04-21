@@ -4,6 +4,7 @@ WORKDIR /app/connectin-api
 COPY package*.json ./
 RUN npm install
 COPY . .
+WORKDIR /app/connectin-api
 RUN npm run build
 
 # Étape 2 : Configuration du Backend (PHP/Laravel)
