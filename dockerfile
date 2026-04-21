@@ -1,5 +1,5 @@
 # Étape 1 : Build du Front (React)
-FROM node:18-alpine as build-stage
+FROM node:20-alpine as build-stage
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
@@ -34,7 +34,8 @@ RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.
 WORKDIR /var/www/html
 COPY . .
 
-# Copie du build React depuis l'étape 1 (si tes fichiers build vont dans public/build)
+# Copie du build React depuis l'étape 1
+# Note : Laravel Vite met par défaut le build dans public/build
 COPY --from=build-stage /app/public/build ./public/build
 
 # Installation de Composer
