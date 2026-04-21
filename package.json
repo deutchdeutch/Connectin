@@ -1,8 +1,10 @@
 {
-  "dependencies": {
-    "react-router-dom": "^7.13.0"
-  },
-  "devDependencies": {
-    "gh-pages": "^6.3.0"
+  "homepage": "https://deutchdeutch.github.io/connectin",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   }
 }
